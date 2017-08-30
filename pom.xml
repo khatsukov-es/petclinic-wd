@@ -46,29 +46,11 @@
             <version>${selenium.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.8.0</version>
+        </dependency>
     </dependencies>
-
-    <!--<build>-->
-        <!--<plugins>-->
-            <!--<plugin>-->
-                <!--<groupId>com.lazerycode.selenium</groupId>-->
-                <!--<artifactId>driver-binary-downloader-maven-plugin</artifactId>-->
-                <!--<version>1.0.14</version>-->
-                <!--<configuration>-->
-                    <!--&lt;!&ndash; root directory that downloaded driver binaries will be stored in &ndash;&gt;-->
-                    <!--<rootStandaloneServerDirectory>chromedriver</rootStandaloneServerDirectory>-->
-                    <!--&lt;!&ndash; Where you want to store downloaded zip files &ndash;&gt;-->
-                    <!--<downloadedZipFileDirectory>chromedriver/zips</downloadedZipFileDirectory>-->
-                <!--</configuration>-->
-                <!--<executions>-->
-                    <!--<execution>-->
-                        <!--<goals>-->
-                            <!--<goal>selenium</goal>-->
-                        <!--</goals>-->
-                    <!--</execution>-->
-                <!--</executions>-->
-            <!--</plugin>-->
-        <!--</plugins>-->
-    <!--</build>-->
 
 </project>
