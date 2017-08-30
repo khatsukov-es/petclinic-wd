@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
@@ -30,6 +31,21 @@ public class PetclinicTest {
 
         driver.findElement(By.xpath("//h2[text()='Not Found - 404 error']"));
     }
+
+    @Test
+    public void shouldFindOwnerAndChangeHisName() {
+        WebDriver driver = new FirefoxDriver();
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        driver.get("http://localhost:8080/");
+
+        driver.findElement(By.xpath("//span[text()='Pet Types']")).click();
+
+        driver.findElement(By.xpath("//h2[text()='Not Found - 404 error']"));
+    }
+
+
 
     /**
      * Домашнее задание.
