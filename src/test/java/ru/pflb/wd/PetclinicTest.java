@@ -6,9 +6,15 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.concurrent.TimeUnit;
+
+import static org.openqa.selenium.firefox.FirefoxDriver.PROFILE;
 
 /**
  * @author <a href="mailto:8445322@gmail.com">Ivan Bonkin</a>.
@@ -33,16 +39,39 @@ public class PetclinicTest {
     }
 
     @Test
-    public void shouldFindOwnerAndChangeHisName() {
-        WebDriver driver = new FirefoxDriver();
+    public void shouldFindOwnerAndChangeHisName() throws IOException, URISyntaxException {
+
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        FirefoxProfile profile = new FirefoxProfile();
+
+        File firebug = new File(FirefoxDriver.class.getResource("/firebug-1.12.7-fx.xpi").toURI());
+        File firepath = new File(FirefoxDriver.class.getResource("/firepath-0.9.7-fx.xpi").toURI());
+
+        profile.addExtension(firebug);
+        profile.addExtension(firepath);
+
+        profile.setPreference("extensions.firebug.showFirstRunPage", false);
+        capabilities.setCapability(PROFILE, profile);
+        WebDriver driver = new FirefoxDriver(capabilities);
+
+
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
+
+
         driver.get("http://localhost:8080/");
 
-        driver.findElement(By.xpath("//span[text()='Pet Types']")).click();
+        // клик по Find Owners
+        driver.findElement(By.xpath("//span[text()='Find owners']")).click();
 
-        driver.findElement(By.xpath("//h2[text()='Not Found - 404 error']"));
+        // ввод фамилии
+        driver.findElement(By.xpath("//input[@id='lastName']")).sendKeys("Franklin");
+
+        // клик по Find Owner
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+
+        System.out.printf("TODO");
     }
 
 
