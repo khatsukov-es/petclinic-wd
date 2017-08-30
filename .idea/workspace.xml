@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43a2143e-d977-4573-a4f7-3bb300e64860" name="Default" comment="added simple test">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_8_0.xml" />
+    <list default="true" id="43a2143e-d977-4573-a4f7-3bb300e64860" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/pflb/wd/PetclinicTest.java" afterPath="$PROJECT_DIR$/src/test/java/ru/pflb/wd/PetclinicTest.java" />
@@ -31,8 +31,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+            <state relative-caret-position="541">
+              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -41,30 +41,22 @@
       <file leaf-file-name="PetclinicTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/pflb/wd/PetclinicTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="88" column="50" selection-start-line="88" selection-start-column="50" selection-end-line="88" selection-end-column="50" />
+            <state relative-caret-position="663">
+              <caret line="140" column="117" selection-start-line="140" selection-start-column="117" selection-end-line="140" selection-end-column="117" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2488#2489#0" expanded="true" />
+                <element signature="e#2517#2518#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NumberFormatException.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/lang/NumberFormatException.java">
+      <file leaf-file-name="UUID.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/util/UUID.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Integer.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/lang/Integer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="765" column="0" selection-start-line="765" selection-start-column="0" selection-end-line="765" selection-end-column="0" />
+            <state relative-caret-position="121">
+              <caret line="360" column="44" selection-start-line="360" selection-start-column="44" selection-end-line="360" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -339,7 +331,7 @@
       <recent name="D:\code\petclinic-wd\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PetclinicTest.shouldFindOwnerAndChangeHisName">
+  <component name="RunManager" selected="JUnit.PetclinicTest.shouldAddNewPet">
     <configuration default="false" name="PetclinicTest.generateKingMoves" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -405,6 +397,32 @@
       <option name="PACKAGE_NAME" value="ru.pflb.wd" />
       <option name="MAIN_CLASS_NAME" value="ru.pflb.wd.PetclinicTest" />
       <option name="METHOD_NAME" value="shouldFindOwnerAndChangeHisName" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="PetclinicTest.shouldAddNewPet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ru.pflb.wd.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="petclinic-wd" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ru.pflb.wd" />
+      <option name="MAIN_CLASS_NAME" value="ru.pflb.wd.PetclinicTest" />
+      <option name="METHOD_NAME" value="shouldAddNewPet" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -745,16 +763,18 @@
       <envs />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="JUnit.PetclinicTest.generateKingMoves" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.PetclinicTest.shouldDisplayPetTypes" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.PetclinicTest.shouldFindOwnerAndChangeHisName" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.PetclinicTest.shouldAddNewPet" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.PetclinicTest.shouldFindOwnerAndChangeHisName" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.PetclinicTest.shouldDisplayPetTypes" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.PetclinicTest.generateKingMoves" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.PetclinicTest.shouldAddNewPet" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.PetclinicTest.shouldFindOwnerAndChangeHisName" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.PetclinicTest.shouldDisplayPetTypes" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.PetclinicTest.generateKingMoves" />
       </list>
     </recent_temporary>
   </component>
@@ -770,7 +790,7 @@
       <updated>1504009650902</updated>
       <workItem from="1504009653780" duration="3305000" />
       <workItem from="1504015885830" duration="5353000" />
-      <workItem from="1504093429912" duration="5980000" />
+      <workItem from="1504093429912" duration="10595000" />
     </task>
     <task id="LOCAL-00001" summary="added simple test">
       <created>1504010967621</created>
@@ -821,21 +841,22 @@
       <option name="project" value="LOCAL" />
       <updated>1504099098698</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="edit owner test">
+      <created>1504101214761</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1504101214761</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PetclinicTest_shouldFindOwnerAndChangeHisName - 2017.08.30 at 15h 47m 02s.xml">
-      <configuration name="PetclinicTest.shouldFindOwnerAndChangeHisName" configurationId="JUnit" />
+    <history-entry file="PetclinicTest_shouldAddNewPet - 2017.08.30 at 17h 54m 42s.xml">
+      <configuration name="PetclinicTest.shouldAddNewPet" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PetclinicTest_shouldFindOwnerAndChangeHisName - 2017.08.30 at 15h 54m 26s.xml">
-      <configuration name="PetclinicTest.shouldFindOwnerAndChangeHisName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PetclinicTest_shouldFindOwnerAndChangeHisName - 2017.08.30 at 16h 11m 06s.xml">
-      <configuration name="PetclinicTest.shouldFindOwnerAndChangeHisName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PetclinicTest_shouldFindOwnerAndChangeHisName - 2017.08.30 at 16h 15m 31s.xml">
-      <configuration name="PetclinicTest.shouldFindOwnerAndChangeHisName" configurationId="JUnit" />
+    <history-entry file="PetclinicTest_shouldAddNewPet - 2017.08.30 at 18h 09m 13s.xml">
+      <configuration name="PetclinicTest.shouldAddNewPet" configurationId="JUnit" />
     </history-entry>
     <history-entry file="PetclinicTest_shouldFindOwnerAndChangeHisName - 2017.08.30 at 16h 16m 38s.xml">
       <configuration name="PetclinicTest.shouldFindOwnerAndChangeHisName" configurationId="JUnit" />
@@ -855,9 +876,15 @@
     <history-entry file="PetclinicTest_shouldFindOwnerAndChangeHisName - 2017.08.30 at 16h 47m 02s.xml">
       <configuration name="PetclinicTest.shouldFindOwnerAndChangeHisName" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="PetclinicTest_shouldFindOwnerAndChangeHisName - 2017.08.30 at 17h 13m 09s.xml">
+      <configuration name="PetclinicTest.shouldFindOwnerAndChangeHisName" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PetclinicTest_shouldFindOwnerAndChangeHisName - 2017.08.30 at 17h 14m 33s.xml">
+      <configuration name="PetclinicTest.shouldFindOwnerAndChangeHisName" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14638000" />
+    <option name="totallyTimeSpent" value="19253000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
@@ -904,7 +931,8 @@
     <MESSAGE value="added home work" />
     <MESSAGE value="added chromedriver" />
     <MESSAGE value="added firebug support" />
-    <option name="LAST_COMMIT_MESSAGE" value="added firebug support" />
+    <MESSAGE value="edit owner test" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit owner test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -927,6 +955,8 @@
           <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2488#2489#0" expanded="true" />
+            <element signature="e#2517#2518#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -966,6 +996,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2488#2489#0" expanded="true" />
+            <element signature="e#2517#2518#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1012,10 +1044,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/lang/NumberFormatException.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/2.52.0/selenium-api-2.52.0-sources.jar!/org/openqa/selenium/WebElement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/Before.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -1028,20 +1068,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/lang/NumberFormatException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/util/UUID.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="360" column="44" selection-start-line="360" selection-start-column="44" selection-end-line="360" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+        <state relative-caret-position="541">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/pflb/wd/PetclinicTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="88" column="50" selection-start-line="88" selection-start-column="50" selection-end-line="88" selection-end-column="50" />
+        <state relative-caret-position="663">
+          <caret line="140" column="117" selection-start-line="140" selection-start-column="117" selection-end-line="140" selection-end-column="117" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2488#2489#0" expanded="true" />
+            <element signature="e#2517#2518#0" expanded="true" />
           </folding>
         </state>
       </provider>
