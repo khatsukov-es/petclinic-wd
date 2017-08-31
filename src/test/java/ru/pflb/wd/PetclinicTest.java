@@ -70,77 +70,78 @@ public class PetclinicTest {
     @Test
     public void shouldFindOwnerAndChangeHisName() {
 
-        // открываем PetClinic по ссылке
+// открываем PetClinic по ссылке
         driver.get("http://localhost:8080/");
 
-        // клик по меню Find Owners
+// клик по меню Find Owners
         driver.findElement(By.xpath("//span[text()='Find owners']")).click();
 
-        // ввод фамилии Franklin в поле Last name
+// ввод фамилии Franklin в поле Last name
         driver.findElement(By.xpath("//input[@id='lastName']")).sendKeys("Franklin");
 
-        // клик по Find Owner
+// клик по Find Owner
         driver.findElement(By.xpath("//button[@type='submit']")).click();
 
-        // считываение Telephone
+// считываение Telephone
         Long telephone = Long.valueOf(driver.findElement(By.xpath("//th[text()='Telephone']/following-sibling::td")).getText());
-        // прибавление единицы для нового телефона
+// прибавление единицы для нового телефона
         Long newTelephone = telephone += 1;
 
-        // нажатие кнопки редактировать пользователя Edit Owner
+// нажатие кнопки редактировать пользователя Edit Owner
         driver.findElement(By.xpath("//a[contains(@href, '/edit') and contains(text(), 'Owner')]")).click();
 
-        // в поле Telephone ввести новый телефон
+// в поле Telephone ввести новый телефон
         WebElement telephoneEditBox = driver.findElement(By.xpath("//input[@id='telephone']"));
         telephoneEditBox.clear();
         telephoneEditBox.sendKeys("" + newTelephone);
 
-        // нажать Update Owner
+// нажать Update Owner
         driver.findElement(By.xpath("//button[text()='Update Owner']")).click();
 
-        // считать измененный телефон
+// считать измененный телефон
         Long updatedPhone = Long.valueOf(driver.findElement(By.xpath("//th[text()='Telephone']/following-sibling::td")).getText());
 
-        // проверить что телефон изменен на нужный
+// проверить что телефон изменен на нужный
         assertThat(updatedPhone).isEqualTo(newTelephone);
     }
 
 
     @Test
     public void shouldAddNewPet() {
-        // открываем PetClinic по ссылке
+// открываем PetClinic по ссылке
         driver.get("http://localhost:8080/");
 
-        // клик по меню Find Owners
+// кликпо меню Find Owners
+
         driver.findElement(By.xpath("//span[text()='Find owners']")).click();
 
-        // ввод фамилии Franklin в поле Last name
+// ввод фамилии Franklin в поле Last name
         driver.findElement(By.xpath("//input[@id='lastName']")).sendKeys("Franklin");
 
-        // клик по Find Owner
+// клик по Find Owner
         driver.findElement(By.xpath("//button[@type='submit']")).click();
 
         String rndVal = RandomStringUtils.randomAlphabetic(4);
 
         for (String animal : Arrays.asList("bird", "cat", "dog", "hamster", "lizard", "snake")) {
-            // клик по Add new Pet
+// клик по Add new Pet
             driver.findElement(By.xpath("//a[starts-with(text(), 'Add') and contains(text(), 'New Pet')]")).click();
 
-            // в выпадающем списке вид тип животного
+// в выпадающем списке вид тип животного
             Select select = new Select(driver.findElement(By.xpath("//select[@id='type']")));
             select.selectByValue(animal);
-            // в поле имя ввести уникальное имя по виду животного в формате типрандом (слитно)
+// в поле имя ввести уникальное имя по виду животного в формате типрандом (слитно)
             driver.findElement(By.xpath("//input[@id='name']")).sendKeys(animal + rndVal);
 
-            // в поле даты рождения ввести 2017/01/01
+// в поле даты рождения ввести 2017/01/01
             driver.findElement(By.xpath("//input[@id='birthDate']")).sendKeys("2017/01/01");
 
-            // кликнуть Update Pet
+// кликнуть Update Pet
             driver.findElement(By.xpath("//button[text()='Update Pet']")).click();
 
-            // должен быть найден только один блок с новым комбинированным именем и относящимся к нему виду животного
+// должен быть найден только один блок с новым комбинированным именем и относящимся к нему виду животного
             assertThat(driver.findElements(By.xpath(String.format(
-                            "//dl[self::*/descendant::dd/text()[1] ='%1$s%2$s' and self::*/descendant::dt[.='Type']/following-sibling::dd/text()[1] = '%1$s']",
+                    "//dl[self::*/descendant::dd/text()[1] ='%1$s%2$s' and self::*/descendant::dt[.='Type']/following-sibling::dd/text()[1] = '%1$s']",
                     animal, rndVal
             ))).size())
                     .isEqualTo(1);
@@ -160,7 +161,26 @@ public class PetclinicTest {
      * <li>Проверить, что добавилась новая запись, и все ее поля соответствуют введенным значениям</li>
      * </ul>
      */
+    @Test
     public void shouldValidateAddedUser() {
-        // TODO
+// TODO
+        driver.get("http://localhost:8080/");
+        driver.findElement(By.xpath("//span[text()='Find owners']")).click();
+        driver.findElement(By.xpath("//a[text()='Add Owner']")).click();
+        String rndFirst = RandomStringUtils.randomAlphabetic(5);
+        String rndLast = RandomStringUtils.randomAlphabetic(5);
+        String rndAdress = RandomStringUtils.randomAlphabetic(5);
+        String rndCity = RandomStringUtils.randomAlphabetic(5);
+        String rndTel = RandomStringUtils.randomNumeric(6);
+        driver.findElement(By.xpath("//input[@id='firstName']")).sendKeys(rndFirst);
+        driver.findElement(By.xpath("//input[@id='lastName']")).sendKeys(rndLast);
+        driver.findElement(By.xpath("//input[@id='address']")).sendKeys(rndAdress);
+        driver.findElement(By.xpath("//input[@id='city']")).sendKeys(rndCity);
+        driver.findElement(By.xpath("//input[@id='telephone']")).sendKeys(rndTel);
+        driver.findElement(By.xpath("//button[@type='submit' and text()='Add Owner']")).click();
+        driver.get("http://localhost:8080/owners?lastName=");
+        assertThat(rndFirst + " " + rndLast).isEqualTo(String.valueOf(driver.findElement(By.xpath("//*[@id='vets']/tbody/tr[last()]/td[1]/a")).getText()));
+
     }
+
 }
