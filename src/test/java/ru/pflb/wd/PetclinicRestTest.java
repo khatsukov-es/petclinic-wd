@@ -39,6 +39,7 @@ public class PetclinicRestTest {
         // преобразование ответа сервера к типу JSONArray
         JSONArray array = new JSONArray(serverResponseBody);
 
+
         // see https://stackoverflow.com/a/7634559
         for(int n = 0; n < array.length(); n++) {
             JSONObject object = array.getJSONObject(n);
