@@ -23,19 +23,26 @@ public class PetclinicRestTest {
      * Должен возвращать JSON объект по фамилии уже существующего клиента.
      */
     public JSONObject findOwner(String lastName) {
-        JSONArray array = new JSONArray(given()
+        // получение ответа от сервера
+        String serverResponseBody = given()
                 .contentType("application/json")
                 .accept("application/json")
                 .baseUri(BASE_URI)
                 .when()
+                // GET /api/owners - все хозяева
                 .get("/api/owners")
                 .then()
-                // expect 2xx response code
+                // ожилаение 2xx кодов - успешных
                 .statusCode(both(greaterThanOrEqualTo(200)).and(lessThan(300)))
-                .extract().body().asString());
+                // извлечение тела ответа сервера как JSONArray
+                .extract().body().asString();
+        // преобразование ответа сервера к типу JSONArray
+        JSONArray array = new JSONArray(serverResponseBody);
 
+        // see https://stackoverflow.com/a/7634559
         for(int n = 0; n < array.length(); n++) {
             JSONObject object = array.getJSONObject(n);
+            // нашли внутри JSONArray объект по фамилии lastName
             if (lastName.equals(object.getString("lastName"))) {
                 return object;
             }
