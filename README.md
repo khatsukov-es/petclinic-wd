@@ -19,5 +19,5 @@
     ng serve
     
 - убедиться, что в браузере по адресу localhost:4200 открылось приложение Spring PetClinic
-ПИИffffff
+sdsdsdsdsdsdsdffffffffffffffffffffff
 
